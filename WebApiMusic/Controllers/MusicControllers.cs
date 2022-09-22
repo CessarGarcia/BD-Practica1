@@ -29,5 +29,25 @@ namespace WebApiMusic.Controllers
             await dbContext.SaveChangesAsync();
             return Ok();
         }
+
+        [HttpPut("{id:int}")]
+        public async Task<ActionResult> Put(music musica, int id)
+        {
+            if(musica.Id != id)
+            {
+                return BadRequest("El id tanto de 'musica' como el de la 'URL' no coinciden, favor de verificarlos ");
+            }
+            dbContext.Update(musica);
+            await dbContext.SaveChangesAsync();
+            return Ok();
+        }
+
+        [HttpDelete]
+        public async Task<ActionResult> Delete(music musica)
+        {
+            dbContext.Remove(musica);
+            await dbContext.SaveChangesAsync();
+            return Ok();
+        }
     }
 }

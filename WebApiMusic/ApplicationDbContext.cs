@@ -12,5 +12,10 @@ namespace WebApiMusic
         }
 
         public DbSet<music> Musica { get; set; }
+
+        internal void Delete(music music)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
