@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "91Gn3g2IdbFEBd488OAdHFl4m/4242YCapNZIiM1ykFYMKw97ahQWIdtsvvg2xAw0eoGSQUdtOsh3Zat7ThBNQ==",
+  "dgSpecHash": "G67DHJZbmSYJL11Bm4S6w8SuwIdCo9Sq5GeUnFTPT98r42JYcVLovsBH4a+TTijEXMZKMjVvNsgyWFSjJdSYkw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Céssar García\\OneDrive - Universidad Autonoma de Nuevo León\\Documents\\Programacion\\C#\\DotNet\\ApiAlumnos\\WebApiMusic\\WebApiMusic\\WebApiMusic\\WebApiMusic.csproj",
+  "projectFilePath": "C:\\Users\\Céssar García\\OneDrive - Universidad Autonoma de Nuevo León\\Documents\\Programacion\\C#\\WebApiMusic\\BD-Practica1\\WebApiMusic\\WebApiMusic.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Céssar García\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Céssar García\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

@@ -1,51 +1,51 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using WebApiMusic.Entidades;
+using WebApiArtistas.Entidades;
+using WebApiMusic;
 
-namespace WebApiMusic.Controllers
+namespace WebApiArtistas.Controllers
 {
     [ApiController]
-    [Route("api/music")]
-    public class MusicControllers : ControllerBase
+    [Route("api/artista")]
+    public class ArtistaController : ControllerBase
     {
         private readonly ApplicationDbContext dbContext;
-        public MusicControllers(ApplicationDbContext dbContext)
+
+        public ArtistaController(ApplicationDbContext dbContext)
         {
             this.dbContext = dbContext;
         }
-
-        public object Context { get; }
-
+                 /*Get Post Put Delete*/
         [HttpGet]
-        public async Task<ActionResult<List<Music>>> Get()
+        public async Task<ActionResult<List<Artista>>> Get()
         {
-            return await dbContext.musica.ToListAsync();
+            return await dbContext.artista.ToListAsync();
         }
 
         [HttpPost]
-        public async Task<ActionResult> Post(Music musica)
+        public async Task<ActionResult> Post(Artista artista)
         {
-            dbContext.Add(musica);
+            dbContext.Add(artista);
             await dbContext.SaveChangesAsync();
             return Ok();
         }
 
         [HttpPut("{id:int}")]
-        public async Task<ActionResult> Put(Music musica, int id)
+        public async Task<ActionResult> Put(Artista artista, int id)
         {
-            if(musica.Id != id)
+            if (artista.Id != id)
             {
                 return BadRequest("El id tanto de 'musica' como el de la 'URL' no coinciden, favor de verificarlos ");
             }
-            dbContext.Update(musica);
+            dbContext.Update(artista);
             await dbContext.SaveChangesAsync();
             return Ok();
         }
 
         [HttpDelete]
-        public async Task<ActionResult> Delete(Music musica)
+        public async Task<ActionResult> Delete(Artista artista)
         {
-            dbContext.Remove(musica);
+            dbContext.Remove(artista);
             await dbContext.SaveChangesAsync();
             return Ok();
         }

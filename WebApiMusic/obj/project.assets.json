@@ -2226,11 +2226,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Céssar García\\OneDrive - Universidad Autonoma de Nuevo León\\Documents\\Programacion\\C#\\DotNet\\ApiAlumnos\\WebApiMusic\\WebApiMusic\\WebApiMusic\\WebApiMusic.csproj",
+      "projectUniqueName": "C:\\Users\\Céssar García\\OneDrive - Universidad Autonoma de Nuevo León\\Documents\\Programacion\\C#\\WebApiMusic\\BD-Practica1\\WebApiMusic\\WebApiMusic.csproj",
       "projectName": "WebApiMusic",
-      "projectPath": "C:\\Users\\Céssar García\\OneDrive - Universidad Autonoma de Nuevo León\\Documents\\Programacion\\C#\\DotNet\\ApiAlumnos\\WebApiMusic\\WebApiMusic\\WebApiMusic\\WebApiMusic.csproj",
+      "projectPath": "C:\\Users\\Céssar García\\OneDrive - Universidad Autonoma de Nuevo León\\Documents\\Programacion\\C#\\WebApiMusic\\BD-Practica1\\WebApiMusic\\WebApiMusic.csproj",
       "packagesPath": "C:\\Users\\Céssar García\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Céssar García\\OneDrive - Universidad Autonoma de Nuevo León\\Documents\\Programacion\\C#\\DotNet\\ApiAlumnos\\WebApiMusic\\WebApiMusic\\WebApiMusic\\obj\\",
+      "outputPath": "C:\\Users\\Céssar García\\OneDrive - Universidad Autonoma de Nuevo León\\Documents\\Programacion\\C#\\WebApiMusic\\BD-Practica1\\WebApiMusic\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Céssar García\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using WebApiArtistas.Entidades;
 using WebApiMusic.Entidades;
 
 namespace WebApiMusic
@@ -11,11 +12,7 @@ namespace WebApiMusic
 
         }
 
-        public DbSet<music> Musica { get; set; }
-
-        internal void Delete(music music)
-        {
-            throw new NotImplementedException();
-        }
+        public DbSet<Music> musica { get; set; }
+        public DbSet<Artista> artista { get; set; }
     }
 }
