@@ -15,7 +15,7 @@ namespace WebApiArtistas.Controllers
         {
             this.dbContext = dbContext;
         }
-                 /*Get Post Put Delete*/
+        /*Get Post Put Delete*/
         [HttpGet]
         public async Task<ActionResult<List<Artista>>> Get()
         {

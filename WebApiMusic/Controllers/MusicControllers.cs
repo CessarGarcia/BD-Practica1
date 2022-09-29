@@ -19,12 +19,23 @@ namespace WebApiMusic.Controllers
         [HttpGet]
         public async Task<ActionResult<List<Music>>> Get()
         {
-            return await dbContext.musica.ToListAsync();
+            return await dbContext.musica.Include(x => x.Artista).ToListAsync();
+        }
+
+       [HttpGet("{id:int}")]
+        public async Task<ActionResult<Music>> GetById(int id)
+        {
+            return await dbContext.musica.FirstOrDefaultAsync(x => x.Id == id);
         }
 
         [HttpPost]
         public async Task<ActionResult> Post(Music musica)
         {
+            var existeMusic = await dbContext.musica.AnyAsync(x => x.Id == musica.ArtistaId);
+            if (!existeMusic)
+            {
+                return BadRequest($"No existe la musica con el id: {musica.ArtistaId}");
+            }
             dbContext.Add(musica);
             await dbContext.SaveChangesAsync();
             return Ok();
@@ -33,7 +44,12 @@ namespace WebApiMusic.Controllers
         [HttpPut("{id:int}")]
         public async Task<ActionResult> Put(Music musica, int id)
         {
-            if(musica.Id != id)
+            var exist = await dbContext.musica.AnyAsync(x => x.Id == id);
+            if (!exist)
+            {
+                return NotFound("No existe");
+            }
+            if (musica.Id != id)
             {
                 return BadRequest("El id tanto de 'musica' como el de la 'URL' no coinciden, favor de verificarlos ");
             }
@@ -42,12 +58,18 @@ namespace WebApiMusic.Controllers
             return Ok();
         }
 
-        [HttpDelete]
-        public async Task<ActionResult> Delete(Music musica)
+        [HttpDelete("{id:int}")]
+        public async Task<ActionResult> Delete(int id)
         {
-            dbContext.Remove(musica);
+            var exist = await dbContext.musica.AnyAsync(x => x.Id == id);
+            if (!exist)
+            {
+                return NotFound("No existe");
+            }
+            dbContext.Remove(new Music { Id = id });
             await dbContext.SaveChangesAsync();
             return Ok();
+
         }
     }
 }
