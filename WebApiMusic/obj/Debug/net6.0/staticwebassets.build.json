@@ -1,11 +1,37 @@
 {
   "Version": 1,
-  "Hash": "QvzIBV6iWHEmWNzRwOmoVbSc+/AtGUchMby14YNHVRI=",
+  "Hash": "o+OFwQI9Riqdf2poeYrBcNMKDaIqVMot2vJ/mXo8Ihc=",
   "Source": "WebApiMusic",
   "BasePath": "_content/WebApiMusic",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "WebApiMusic\\wwwroot",
+      "Source": "WebApiMusic",
+      "ContentRoot": "C:\\Users\\Céssar García\\OneDrive - Universidad Autonoma de Nuevo León\\Documents\\Programacion\\C#\\WebApiMusic\\BD-Practica1\\WebApiMusic\\wwwroot\\",
+      "BasePath": "_content/WebApiMusic",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Céssar García\\OneDrive - Universidad Autonoma de Nuevo León\\Documents\\Programacion\\C#\\WebApiMusic\\BD-Practica1\\WebApiMusic\\wwwroot\\ListadoArtistas.txt",
+      "SourceId": "WebApiMusic",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Céssar García\\OneDrive - Universidad Autonoma de Nuevo León\\Documents\\Programacion\\C#\\WebApiMusic\\BD-Practica1\\WebApiMusic\\wwwroot\\",
+      "BasePath": "_content/WebApiMusic",
+      "RelativePath": "ListadoArtistas.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\ListadoArtistas.txt"
+    }
+  ]
 }

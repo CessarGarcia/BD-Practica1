@@ -1,12 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using WebApiArtistas.Entidades;
 using WebApiMusic.Entidades;
 
 namespace WebApiMusic
 {
     public class ApplicationDbContext : DbContext
     {
-        
+
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
 

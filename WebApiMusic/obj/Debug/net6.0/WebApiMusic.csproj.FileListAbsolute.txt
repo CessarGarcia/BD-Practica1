@@ -118,3 +118,5 @@ C:\Users\Céssar García\OneDrive - Universidad Autonoma de Nuevo León\Document
 C:\Users\Céssar García\OneDrive - Universidad Autonoma de Nuevo León\Documents\Programacion\C#\WebApiMusic\BD-Practica1\WebApiMusic\obj\Debug\net6.0\WebApiMusic.pdb
 C:\Users\Céssar García\OneDrive - Universidad Autonoma de Nuevo León\Documents\Programacion\C#\WebApiMusic\BD-Practica1\WebApiMusic\obj\Debug\net6.0\WebApiMusic.genruntimeconfig.cache
 C:\Users\Céssar García\OneDrive - Universidad Autonoma de Nuevo León\Documents\Programacion\C#\WebApiMusic\BD-Practica1\WebApiMusic\obj\Debug\net6.0\ref\WebApiMusic.dll
+C:\Users\Céssar García\OneDrive - Universidad Autonoma de Nuevo León\Documents\Programacion\C#\WebApiMusic\BD-Practica1\WebApiMusic\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Céssar García\OneDrive - Universidad Autonoma de Nuevo León\Documents\Programacion\C#\WebApiMusic\BD-Practica1\WebApiMusic\bin\Debug\net6.0\WebApiMusic.staticwebassets.runtime.json

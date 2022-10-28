@@ -1,25 +1,41 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿//Microsoft
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using WebApiArtistas.Entidades;
-using WebApiMusic;
+//WebApiMusic
+using WebApiMusic.Entidades;
 
-namespace WebApiArtistas.Controllers
+
+
+namespace WebApiMusic.Controllers
 {
     [ApiController]
-    [Route("api/artista")]
+    [Route("artista")]
     public class ArtistaController : ControllerBase
     {
         private readonly ApplicationDbContext dbContext;
+        private readonly ILogger<ArtistaController> log;
+        
 
-        public ArtistaController(ApplicationDbContext dbContext)
+        public ArtistaController(ApplicationDbContext context, ILogger<ArtistaController> logger)
         {
-            this.dbContext = dbContext;
+            this.dbContext = context;
+            this.log = logger;
         }
         /*Get Post Put Delete*/
+        
         [HttpGet]
-        public async Task<ActionResult<List<Artista>>> Get()
+        [HttpGet("/listadoArtistas")]
+        public async Task<ActionResult<List<Artista>>> GetAll()
         {
+            log.LogInformation("Obteniendo listado de artistas");
             return await dbContext.artista.ToListAsync();
+        }
+
+        [HttpGet("{id:int}")]
+        public async Task<ActionResult<Artista>> GetById(int id)
+        {
+            log.LogInformation("EL ID ES: " + id);
+            return await dbContext.artista.FirstOrDefaultAsync(x => x.Id == id);
         }
 
         [HttpPost]
